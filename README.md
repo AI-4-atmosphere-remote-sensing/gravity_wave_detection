@@ -8,6 +8,8 @@ For this investigation, we used the Day/Night Band (DNB) images from the Visible
 ## Proposed Network
 First, we present \textit{gWaveNet}, a hybrid neural network architecture that combines both trainable and non-trainable layers. Next, we introduce a unique kernel specifically designed to detect various shapes within our data. This kernel plays a crucial role in our methodology. Notably, we integrate the kernel into the initial layer of \textit{gWaveNet}, effectively incorporating its capabilities into the overall model.
 
+<img src="./gWaveNet-images/kernel_9x9.png" alt="3x3" width="200"/>
+
 ![text-here](./gWaveNet-images/kernel_9x9.png)
 ![text-here](./gWaveNet-images/kernel_7x7.png)
 ![text-here](./gWaveNet-images/kernel_5x5.png)
