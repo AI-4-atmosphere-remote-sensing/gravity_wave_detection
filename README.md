@@ -9,16 +9,13 @@ For this investigation, we used the Day/Night Band (DNB) images from the Visible
 First, we present \textit{gWaveNet}, a hybrid neural network architecture that combines both trainable and non-trainable layers. Next, we introduce a unique kernel specifically designed to detect various shapes within our data. This kernel plays a crucial role in our methodology. Notably, we integrate the kernel into the initial layer of \textit{gWaveNet}, effectively incorporating its capabilities into the overall model.
 
 <img src="./gWaveNet-images/kernel_9x9.png" alt="3x3" width="200"/>
-
-![text-here](./gWaveNet-images/kernel_9x9.png)
-![text-here](./gWaveNet-images/kernel_7x7.png)
-![text-here](./gWaveNet-images/kernel_5x5.png)
-![text-here](./gWaveNet-images/kernel_3x3.png)
-
+<img src="./gWaveNet-images/kernel_7x7.png" alt="5x5" width="200"/>
+<img src="./gWaveNet-images/kernel_5x5.png" alt="7x7" width="200"/>
+<img src="./gWaveNet-images/kernel_3x3.png" alt="9x9" width="200"/>
 
 Our proposed \textit{gWaveNet} is a deep convolutional network that has 15 layers that comprise 6 convolutional layers, 6 max-pooling layers, 2 dense layers, and 1 dropout layer (Figure~\ref{fig:model}). The model is designed for binary classification tasks on grayscale images. We integrated the proposed kernels in the first layer making it either trainable or non-trainable, followed by alternating convolutional and max-pooling layers, which successively extract features and reduce spatial dimensions. L2 regularization is applied in the second convolutional layer to reduce any overfitting caused by the custom kernel in the first layer. After the final max-pooling layer, the output tensor is flattened, and the data passes through a dense layer, a dropout layer, and a final sigmoid-activated dense layer for binary classification.
 
-![text-here](./gWaveNet-images/model-arch.png)
+<img src="./gWaveNet-images/model-arch.png" alt="3x3" width="200"/>
 
 Since our dataset contains excessive noise including the horizontal lines, we designed the kernel in such a way that can capture all types of gravity wave shapes excluding the horizontal lines. We used the kernel in the first layer of our proposed deep-learning model motivated by the Laplacian filter, to generate low-level features from input grayscale images. The first layer of the model is configured both as trainable and non-trainable to validate its effectiveness for generating domain-specific features from the dataset.
 
@@ -54,9 +51,12 @@ The comprehensive evaluation of our ablation study, as depicted in Table~\ref{ta
 
 Additionally, we used the area under the curve (AUC) score to evaluate the learning capability of the model, which reached an impressive 97.25\%. Finally, we employed the F1 score as an evaluation metric for the test cases, utilizing data that was never part of the training process. The F1 score demonstrated a strong performance of 90\% for models with trainable kernels, further affirming the effectiveness of the model in accurately classifying test data. Overall, the results obtained from the various combinations explored in our ablation study consistently highlight the outstanding performance of our proposed custom kernel model.
 
-![text-here](./gWaveNet-images/gw-score-diff.png =200x100)
-
+<img src="./gWaveNet-images/gw-score-diff.png" alt="3x3" width="300"/>
 ![text-here](./gWaveNet-images/table.png)
+<! --
+<img src="./gWaveNet-images/kernel_9x9.png" alt="3x3" width="200"/>
+-->
+
 
 
 ### Overall Observation
