@@ -8,12 +8,15 @@ For this investigation, we used the Day/Night Band (DNB) images from the Visible
 ## Proposed Network
 First, we present \textit{gWaveNet}, a hybrid neural network architecture that combines both trainable and non-trainable layers. Next, we introduce a unique kernel specifically designed to detect various shapes within our data. This kernel plays a crucial role in our methodology. Notably, we integrate the kernel into the initial layer of \textit{gWaveNet}, effectively incorporating its capabilities into the overall model.
 
-![text-here](./images/kernels.png)
+![text-here](./gWaveNet-images/kernel_9x9.png)
+![text-here](./gWaveNet-images/kernel_7x7.png)
+![text-here](./gWaveNet-images/kernel_5x5.png)
+![text-here](./gWaveNet-images/kernel_3x3.png)
 
 
 Our proposed \textit{gWaveNet} is a deep convolutional network that has 15 layers that comprise 6 convolutional layers, 6 max-pooling layers, 2 dense layers, and 1 dropout layer (Figure~\ref{fig:model}). The model is designed for binary classification tasks on grayscale images. We integrated the proposed kernels in the first layer making it either trainable or non-trainable, followed by alternating convolutional and max-pooling layers, which successively extract features and reduce spatial dimensions. L2 regularization is applied in the second convolutional layer to reduce any overfitting caused by the custom kernel in the first layer. After the final max-pooling layer, the output tensor is flattened, and the data passes through a dense layer, a dropout layer, and a final sigmoid-activated dense layer for binary classification.
 
-![text-here](./images/model-arch.png)
+![text-here](./gWaveNet-images/model-arch.png)
 
 Since our dataset contains excessive noise including the horizontal lines, we designed the kernel in such a way that can capture all types of gravity wave shapes excluding the horizontal lines. We used the kernel in the first layer of our proposed deep-learning model motivated by the Laplacian filter, to generate low-level features from input grayscale images. The first layer of the model is configured both as trainable and non-trainable to validate its effectiveness for generating domain-specific features from the dataset.
 
@@ -49,9 +52,9 @@ The comprehensive evaluation of our ablation study, as depicted in Table~\ref{ta
 
 Additionally, we used the area under the curve (AUC) score to evaluate the learning capability of the model, which reached an impressive 97.25\%. Finally, we employed the F1 score as an evaluation metric for the test cases, utilizing data that was never part of the training process. The F1 score demonstrated a strong performance of 90\% for models with trainable kernels, further affirming the effectiveness of the model in accurately classifying test data. Overall, the results obtained from the various combinations explored in our ablation study consistently highlight the outstanding performance of our proposed custom kernel model.
 
-![text-here](./images/diff.png)
+![text-here](./gWaveNet-images/score-diff.png)
 
-![text-here](./images/table.png)
+![text-here](./gWaveNet-images/table.png)
 
 
 ### Overall Observation
@@ -66,5 +69,3 @@ In this work, we encountered challenging data characterized by noisy and complex
  >> ### 3. [EC2 based Configuration](https://github.com/big-data-lab-umbc/aws-automation/tree/main/gpu-example/OceanEddy#3-configuring-ec2-for-ocean-eddy-classification-model:~:text=3.%20Configuring%20EC2%20for%20Ocean%20Eddy%20classification%20model)
 `
  -->
-
-![text-here](./images/4.png)
