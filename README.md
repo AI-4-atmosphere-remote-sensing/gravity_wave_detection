@@ -52,7 +52,7 @@ The comprehensive evaluation of our ablation study, as depicted in Table~\ref{ta
 
 Additionally, we used the area under the curve (AUC) score to evaluate the learning capability of the model, which reached an impressive 97.25\%. Finally, we employed the F1 score as an evaluation metric for the test cases, utilizing data that was never part of the training process. The F1 score demonstrated a strong performance of 90\% for models with trainable kernels, further affirming the effectiveness of the model in accurately classifying test data. Overall, the results obtained from the various combinations explored in our ablation study consistently highlight the outstanding performance of our proposed custom kernel model.
 
-![text-here](./gWaveNet-images/score-diff.png)
+![text-here](./gWaveNet-images/gw-score-diff.png =200x100)
 
 ![text-here](./gWaveNet-images/table.png)
 
