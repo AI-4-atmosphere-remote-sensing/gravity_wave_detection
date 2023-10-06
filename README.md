@@ -1,3 +1,12 @@
+# Gravity Wave Localization
+## Testing of images on AWS EC2
+
+
+
+<!---
+## What is Gravity Wave and what is our purpose in this work?
+
+
 # gravity_wave_detection
 ## What is Gravity Wave and what is our purpose in this work?
 Atmospheric gravity waves are a type of wave that occurs in the Earth's atmosphere caused by interplay between gravity and buoyancy forces. Atmospheric phenomena such as, global circulation and air turbulence are due to the presence of gravity waves. These waves have profound impacts on various aspects of the atmosphere, including the patterns of precipitation, cloud formation, ozone distribution, aerosols, pollutant dispersion etc. Therefore, understanding gravity waves is essential for comprehending and monitoring changes in a wide range of atmospheric behaviors. Limited studies have been conducted to identify gravity waves from satellite data using machine learning techniques. Particularly, without the need for noise removal, remains an underexplored area of research. This study presents a novel kernel design aimed at identifying gravity waves within satellite images. The proposed kernel is seamlessly integrated into the proposed deep neural network, denoted as \textbf{gWaveNet}. Our proposed model exhibits exceptional proficiency in detecting images containing gravity waves from noisy satellite data without any feature engineering. The empirical results prove the effectiveness of our proposed model with training accuracy exceeding 98\% and testing accuracy close to 94\%.
@@ -65,7 +74,7 @@ Additionally, we used the area under the curve (AUC) score to evaluate the learn
 
 In this work, we encountered challenging data characterized by noisy and complex patterns of non-linear shapes, making straightforward classification difficult. Consequently, our focus was on leveraging the unique kernel integrated within the \textit{gWaveNet} model to address these challenges effectively. In Table~\ref{tab:baselinecomp}, we compared our model with various state-of-the-art computer vision techniques. Our experiments revealed that the right kernel can improve the performance a lot especially when it comes to data such as satellite gravity wave images which is noisy and non-uniform ripple-like patterns that need to be extracted from it. Additionally, we found that, bigger kernel aids in detecting repeated shapes of various thicknesses as it covers a wider area. Moreover, we see, there are significant differences using a kernel not only with the right shape but also with the right coefficients, as compared to the proposed 7x7, 5x5 kernels in \textit{gWaveNet} with Gabor, Sobel or Laplacian filters. Notably, when comparing the F1 scores of the proposed model with other approaches, our model significantly outperforms the state-of-the-art techniques. Figure~\ref{fig:f1-diff} illustrates the average, as well as individual differences in F1 scores between the proposed and other approaches, providing further clarification on the performance of our model.
 
-<!-- comment
+
 `
 # Table of Contents
  >> ### 1. [What is Ocean Eddy?](https://github.com/big-data-lab-umbc/aws-automation/tree/main/gpu-example/OceanEddy#:~:text=README.md-,What%20is%20Ocean%20Eddy%3F,-The%20term%20eddy)
