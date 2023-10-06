@@ -1,26 +1,25 @@
 # Gravity Wave Localization
 ## Testing of images on AWS EC2
 - First login to AWS and choose EC2 either from the Services (top left) or by searching it in the search box.
-<img src="./gWaveNet-images/sel-ec2.png" alt="3x3" width="300"/>
+<img src="./gWaveNet-images/ec2_testing/sel-ec2.png" alt="3x3" width="300"/>
 
 - In the EC2 console select the Launch instance button that will redirect to a page to select the EC2 virtual machine
-<img src="./gWaveNet-images/launch.png" alt="3x3" width="300"/>
+<img src="./gWaveNet-images/ec2_testing/launch.png" alt="3x3" width="300"/>
 
 - In the Name filed choose a unique name (name has be to unique for a specific region), then you can choose any AMIs, for example in this case, we chose Ubuntu as our AMI and from the dropdown there is an option to choose AMIs with more resources (which are paid services)
-<img src="./gWaveNet-images/AMI1.png" alt="3x3" width="300"/>
-
+<img src="./gWaveNet-images/ec2_testing/AMI1.png" alt="3x3" width="300"/>
 
 - Next, in the instance type any inastances can be selected using the dropdown. After selecting that, you need to select a key pair (if you do not have, you can create one here). Every user must have a key pair created and stored in the dir from where they want to access the EC2. Finally you can clink the Launch Instance button on bottom right.
-<img src="./gWaveNet-images/AMI2.png" alt="3x3" width="300"/>
+<img src="./gWaveNet-images/ec2_testing/AMI2.png" alt="3x3" width="300"/>
 
 - After the instance launched you can see their state (running or stopped) on EC2 console where you will be able to start, stop or terminate any instances you want using the Action button on top.
-<img src="./gWaveNet-images/ec2-cons.png" alt="3x3" width="300"/>
+<img src="./gWaveNet-images/ec2_testing/ec2-cons.png" alt="3x3" width="300"/>
 
 - Now, click on the instance id of the running instance that will let you connect from your PC using the connect button.
-<img src="./gWaveNet-images/ec2-cons.png" alt="3x3" width="300"/>
+<img src="./gWaveNet-images/ec2_testing/connect.png" alt="3x3" width="300"/>
 
 - Here, you can choose the SSH client tab to connect using a terminal. Please follow the steps from 1 to 4 and use the example ssh command to connect to the EC2 instance that was just created.
-<img src="./gWaveNet-images/ssh.png" alt="3x3" width="300"/>
+<img src="./gWaveNet-images/ec2_testing/ssh.png" alt="3x3" width="300"/>
 
 <!---
 ## What is Gravity Wave and what is our purpose in this work?
