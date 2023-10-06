@@ -23,7 +23,7 @@ First, we present \textit{gWaveNet}, a hybrid neural network architecture that c
 <img src="./gWaveNet-images/kernel_7x7.png" alt="5x5" width="200"/>
 <img src="./gWaveNet-images/kernel_5x5.png" alt="7x7" width="200"/>
 <img src="./gWaveNet-images/kernel_3x3.png" alt="9x9" width="200"/>
--->
+
 Our proposed \textit{gWaveNet} is a deep convolutional network that has 15 layers that comprise 6 convolutional layers, 6 max-pooling layers, 2 dense layers, and 1 dropout layer (Figure~\ref{fig:model}). The model is designed for binary classification tasks on grayscale images. We integrated the proposed kernels in the first layer making it either trainable or non-trainable, followed by alternating convolutional and max-pooling layers, which successively extract features and reduce spatial dimensions. L2 regularization is applied in the second convolutional layer to reduce any overfitting caused by the custom kernel in the first layer. After the final max-pooling layer, the output tensor is flattened, and the data passes through a dense layer, a dropout layer, and a final sigmoid-activated dense layer for binary classification.
 
 <img src="./gWaveNet-images/model-arch.png" alt="arch" width="600"/>
