@@ -5,6 +5,7 @@
 ## Testing of images on AWS EC2
 - First login to AWS and choose EC2 either from the Services (top left) or by searching it in the search box.
 <img src="./gWaveNet-images/ec2_testing/sel-ec2.png" alt="3x3" width="300"/>
+<img src="gWaveNet-images/ec2_testing/sel-ec2.png">
 
 - In the EC2 console select the Launch instance button that will redirect to a page to select the EC2 virtual machine
 <img src="./gWaveNet-images/ec2_testing/launch.png" alt="3x3" width="300"/>
