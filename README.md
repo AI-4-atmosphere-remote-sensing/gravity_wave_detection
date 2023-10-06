@@ -1,3 +1,6 @@
+
+<img src="./gWaveNet-images/kernels.png" alt="3x3" width="600"/>
+
 # Gravity Wave Localization
 ## Testing of images on AWS EC2
 - First login to AWS and choose EC2 either from the Services (top left) or by searching it in the search box.
